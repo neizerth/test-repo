@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Creative</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header class="header">
+		<div class="container header__container">
+			<div class="logo">
+				<img src="img/icon-menu.png" alt="Меню" class="menu__icon">
+				<img class="logo__icon" src="img/logo.png" alt="Логотип">
+				<div class="logo__title">Grid</div>
+			</div>
+			<nav class="menu">
+				<ul class="menu__items">
+					<li class="menu__item">
+						<span class="menu__link menu__link_active">
+							How it works
+						</span>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Who we are
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							What we do
+						</a>
+					</li>
+					<li class="menu__item menu__item_last">
+						<a href="#" class="menu__link">
+							Contact us
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<a href="#" class="btn btn_primary">
+				Sign in
+			</a>
+		</div>
+	</header>
+	<main class="main">
+		<section class="first-screen">
+			<div class="container">
+				<picture>
+					<source media="(min-width: 768px)" srcset="img/desktop/rect.png">
+					<img src="img/mobile/rect.png" alt="" class="first-screen__rect">
+				</picture>
+				<picture>
+					<source media="(min-width: 768px)" srcset="img/desktop/dots.png">
+					<img src="img/mobile/dots.png" class="first-screen__dots" alt="Фон в точку">
+				</picture>
+				<h1 class="first-screen__title text-center desktop">
+					Combine
+					<span class="highlight">
+						<span class="highlight__text">fine</span>
+					</span>
+					images
+				</h1>
+				<h2 class="first-screen__subtitle text-center desktop">
+					To represent a product
+				</h2>
+
+				<h1 class="first-screen__title text-center mobile">
+					Mobile
+				</h1>
+				<h2 class="first-screen__subtitle text-center mobile">
+					<span class="highlight">
+						<span class="highlight__text">
+							Cool
+						</span>
+					</span> 
+					images
+				</h2>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

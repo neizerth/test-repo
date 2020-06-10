@@ -1,0 +1,223 @@
+/*
+	Версталось без PixelPerfect, гарантированные расхождения
+	Desktop-First
+*/
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+}
+
+/* общие классы */
+
+.container {
+	max-width: 1440px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 15px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.btn {
+	border-radius: 100px;
+	display: inline-block;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	min-width: 170px;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.mobile {
+	display: none;
+}
+
+.btn_primary {
+	color: #fff;
+	background: #2D3436;
+}
+
+
+.btn_secondary {
+	color: #6C5CE7;
+	box-shadow: 0px 16px 24px rgba(38, 50, 56, 0.08), 0px 8px 8px rgba(38, 50, 56, 0.12);
+}
+
+/* header */
+.header {
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* гарантированно будет перекрывать всё */
+	z-index: 100;
+	background: #fff;
+	width: 100%;
+	/* скопировано из figma */
+	box-shadow: 0px 4px 8px rgba(38, 50, 56, 0.08), 0px 2px 4px rgba(38, 50, 56, 0.16);
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-weight: bold;
+	font-size: 48px;
+	letter-spacing: -1px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+}
+
+/* menu */
+
+.menu__icon {
+	display: none;
+}
+
+.menu__items {
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+}
+
+.menu__item {
+	margin-right: 8px;
+}
+
+/* выводим точки между пунктами меню */
+.menu__item::after {
+	content: '•';
+	color: #FDCB6E;
+}
+
+/* after псевдоэлемент у последнего элемента .menu__item */
+.menu__item_last::after {
+	display: none;
+}
+
+.menu__link {
+	display: inline-block;
+	color: #6C5CE7;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.menu__link_active {
+	font-weight: bold;
+	color: #000;
+}
+
+.main {
+	padding-top: 102px;
+}
+
+.first-screen {
+	padding: 80px 0 0 0;
+	position: relative;
+}
+
+.first-screen__rect {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.first-screen__dots {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.first-screen__title {
+	position: relative;
+	/* текст должен перекрывать точки и прямоугольники */
+	z-index: 3;
+	font-weight: 800;
+	font-size: 96px;
+	line-height: 104px;
+	color: #2D3436;
+	/* скопировано из figma */
+	text-shadow: 0px 4px 0px #FFFFFF;
+	letter-spacing: -3px;
+	margin: 0;
+}
+
+.highlight {
+	position: relative;
+	display: inline-block;
+}
+
+.highlight__text {
+	color: #E84393;
+	display: inline-block;
+	position: relative;
+	z-index: 4;
+}
+
+.highlight::after {
+	content: '';
+	background-color: #55EFC4;
+	position: absolute;
+	z-index: 3;
+	left: -10px;
+	bottom: -5px;
+	width: 100%;
+	height: 51px;
+	padding: 0 10px;
+	border-radius: 20px;
+}
+
+.first-screen__subtitle {
+	color: #2D3436;
+	margin: 0;
+	position: relative;
+	z-index: 3;
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 77px;
+	letter-spacing: -1px;
+}
+
+@media(max-width: 767px) {
+	.btn {
+		border-radius: 10px;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.menu__items {
+		display: none;
+	}
+	.menu__icon {
+		display: block;
+	}
+	.logo__icon {
+		display: none;
+	}
+	.main {
+		padding-top: 82px;
+	} 
+	.first-screen__title {
+		font-size: 64px;
+	}
+	.first-screen__subtitle {
+		font-size: 48px;
+	}
+}
